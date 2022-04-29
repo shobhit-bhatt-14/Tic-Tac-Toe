@@ -35,8 +35,8 @@ const Game = () => {
   const moves = history.map((step, move) => {
     const desc = move ? "Go to move #" + move : "Go to game start";
     return (
-      <li key={move}>
-        <button className="btn btn-primary" onClick={() => jumpTo(move)}>
+      <li key={move} className="fw-bold fs-5 mb-1">
+        <button type="button" className="btn btn-primary col-8" onClick={() => jumpTo(move)}>
           {desc}
         </button>
       </li>
@@ -44,12 +44,12 @@ const Game = () => {
   });
 
   return (
-    <div className="text-center">
-      <div>{status}</div>
+    <div className="col-12">
+      <div className="text-center">{status}</div>
       <br />
-      <div className="d-flex">
+      <div className="d-flex justify-content-evenly">
         <Board values={history[step].squares} handleClick={handleClick} />
-        <ol>{moves}</ol>
+        <ol className="col-6">{moves}</ol>
       </div>
     </div>
   );
