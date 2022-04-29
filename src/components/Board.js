@@ -5,7 +5,7 @@ const Board = (props) => {
   const renderSquare = (i) => {
     return (
       <Square
-        handleClick={props.handleClick}
+        handleClick={() => props.handleClick(i)}
         value={props.values[i]}
       />
     );
