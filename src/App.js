@@ -1,11 +1,15 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Game from "./components/Game";
 
 const App = () => {
   return (
-    <div className="App">
-      Hello React
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Game />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

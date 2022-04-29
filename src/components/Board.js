@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import Square from "./Square";
 
 const Board = () => {
-  return (
-    <div>Board</div>
-  )
-}
+  let board = [];
+  [...Array(9)].map((ele, index) => {
+    board.push(<Square key={index} value={index} />);
 
-export default Board
+    if ((index + 1) % 3 == 0) {
+      board.push(<br />);
+    }
+  });
+
+  return <div className="">{board}</div>;
+};
+
+export default Board;

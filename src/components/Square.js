@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const Square = () => {
+const Square = (props) => {
   return (
-    <div>Square</div>
-  )
-}
+    <button className="bg-white text-center border-secondary border-1 shadow-none">
+      {props.value}
+    </button>
+  );
+};
 
-export default Square
+export default Square;
