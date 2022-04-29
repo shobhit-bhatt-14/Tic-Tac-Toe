@@ -5,13 +5,8 @@ const Board = (props) => {
   const renderSquare = (i) => {
     return (
       <Square
-        key={i}
-        index={i}
+        handleClick={props.handleClick}
         value={props.values[i]}
-        values={props.values}
-        setValues={props.setValues}
-        player={props.player}
-        setPlayer={props.setPlayer}
       />
     );
   };
